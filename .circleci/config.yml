@@ -1,15 +1,13 @@
 version: 2
 
 jobs:
-  deploy-job:
-    steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "CcbaTOvMbSb7k48c+Ne1ehjNdbaxdSuxAu3DELATh/c"
   one:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "CcbaTOvMbSb7k48c+Ne1ehjNdbaxdSuxAu3DELATh/c"
       - checkout
       - run: echo "Ciao circleCI"
       - run: mkdir -p my_workspace
@@ -22,6 +20,9 @@ jobs:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "CcbaTOvMbSb7k48c+Ne1ehjNdbaxdSuxAu3DELATh/c"
       - checkout
       - run: echo "Ciao circleCI 2"
       - attach_workspace:
