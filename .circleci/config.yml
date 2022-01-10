@@ -1,6 +1,11 @@
 version: 2
 
 jobs:
+  deploy-job:
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "CcbaTOvMbSb7k48c+Ne1ehjNdbaxdSuxAu3DELATh/c"
   one:
     docker:
       - image: circleci/ruby:2.4.1
