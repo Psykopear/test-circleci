@@ -16,9 +16,9 @@ jobs:
       - run: echo "Ciao circleCI 2"
       - run: sleep 15
 
-  workflows:
-    version: 2
-    one_and_two:
-      jobs:
-        - one
-        - two
+workflows:
+  version: 2
+  one_and_two:
+    jobs:
+      - one
+      - two
